@@ -1,0 +1,47 @@
+@use "mixins" as mix;
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+}
+
+.inputTaskStyle {
+  font-size: 25px;
+}
+
+.inputButtonStyle {
+  font-size: 25px;
+
+  @include mix.buttonStyle;
+}
+
+ul {
+  li {
+    display: flex;
+    gap: 70px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: peachpuff;
+    width: 100%;
+    border: solid white 3px;
+
+    span {
+    }
+
+    input {
+      font-size: 25px;
+    }
+
+    button {
+      display: flex;
+
+      font-size: 25px;
+      @include mix.buttonStyle;
+    }
+  }
+}
