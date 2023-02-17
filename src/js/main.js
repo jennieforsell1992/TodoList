@@ -14,7 +14,6 @@ let myBucketList = [
 let myEmptyList = [];
 
 let ulList = document.getElementById("ulList");
-// displayTodo();
 
 function displayTodo() {
   ulList.innerHTML = "";
@@ -48,7 +47,6 @@ function displayTodo() {
     listButton.innerHTML = "ta bort!";
     listButton.addEventListener("click", () => {
       changeMyBucketList(todoList);
-      //deleteSpan(listButton, newLiList, todoList)
     });
   }
 }
@@ -88,57 +86,4 @@ function addTaskToList(e) {
     myBucketList.push(addToList);
     displayTodo(addToList);
   }
-
-  // let newLiAddToList = document.createElement("li");
-
-  // let newSpanAddToList = document.createElement("span");
-  // let newInputAddToList = document.createElement("input");
-  // newInputAddToList.setAttribute = ("type", "checkbox");
-  // let newButtonAddToList = document.createElement("button");
-
-  // newLiAddToList.appendChild(newSpanAddToList);
-  // newLiAddToList.appendChild(newInputAddToList);
-  // newLiAddToList.appendChild(newButtonAddToList);
-  // ulList.appendChild(newLiAddToList);
 }
-
-// function deleteSpan(listButton, newLiList, todoList){
-
-//     let index = myBucketList.indexOf(todoList);
-//     newLiList.innerHTML = "";
-//     myBucketList.splice(index,1);
-
-//     if (todoList.completed === false) {
-//         todoList.completed = true;
-
-//         let deleteList = document.getElementById("deleteList");
-//         let deletedListLi = document.createElement("li");
-//         deletedListLi.className = "deletedListStyle";
-//         let deletedButtonList = document.createElement("button");
-//         deletedButtonList.classList = "styleButton";
-//         deletedButtonList.innerHTML ="Ångra!";
-//         deleteList.appendChild(deletedListLi);
-//         deleteList.appendChild(deletedButtonList);
-//         deletedListLi.innerHTML += todoList.task;
-//         let valueFromMyList = todoList.task;
-
-//         deletedButtonList.addEventListener("click", () => {
-
-//             deletedButtonList.style.display = "none";
-//             spanGoBackToList(deletedButtonList,valueFromMyList, deletedListLi,todoList)
-
-//         });
-
-//     }
-
-// }
-
-// function spanGoBackToList(deletedButtonList, valueFromMyList, deletedListLi,todoList){
-
-//     myBucketList.push(todoList);
-//     deletedListLi.innerHTML = "";
-//     newLiList.innerHTML += todoList.task;
-//     newLiList.appendChild(deletedButtonList);
-//     //komma på hur jag ska få tillbaka värdet i den andra listan.
-
-// }
